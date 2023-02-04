@@ -10,22 +10,16 @@ def count_sort(arr)
   # replace first half with -
   first_repl = []
   first.each do |l|
-    first_repl << l.gsub(/ .*/, ' -')
+    first_repl << [l[0], '-']
   end
 
-  sorted_arr = Array.new(1) { [] }
-  first_repl.each do |l|
-    order, str = l.split
-    binding.pry
-    sorted_arr[order.to_i] << str
-  end
-  second.each do |l|
-    order, str = l.split
+  sorted_arr = []
 
-    sorted_arr[order.to_i] << str
+  (first_repl + second).each do |l|
+    i = l[0].to_i
+    sorted_arr[i] = [] if sorted_arr[i].nil?
+    sorted_arr[i] << l[1]
   end
 
-  binding.pry
-
-  sorted_arr.flatten.join(' ')
+  sorted_arr.flatten.compact.join(' ')
 end
