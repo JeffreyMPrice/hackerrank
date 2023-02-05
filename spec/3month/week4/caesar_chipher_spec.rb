@@ -1,7 +1,7 @@
 #!/bin/ruby
 # frozen_string_literal: true
 
-require_relative '../../../3month/week4/ceasar_cipher'
+require_relative '../../../3month/week4/caesar_cipher'
 
 describe '#caesar_cipher' do
   it 'ecodes with a rotation of 2' do
