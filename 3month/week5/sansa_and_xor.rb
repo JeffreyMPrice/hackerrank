@@ -13,11 +13,8 @@ def sansa_xor(arr)
     if pa.length == 1
       pa[0]
     else
-      y = x
-      pa.each do |x|
-      end
+      pa.reduce { |s, x| s.nil? ? x  : s ^ x }
     end
   end
-  binding.pry
-  collector.map { |s, x| s ^ x }
+  collector.reduce { |s, x| s.nil? ? x : s ^ x }
 end

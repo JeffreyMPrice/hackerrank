@@ -14,6 +14,6 @@ describe '#sansa_xor' do
   end
 
   it 'returns 0 for [4,5,7,5]' do
-    expect(sansa_xor([4, 5, 7, 5])).to eq 2
+    expect(sansa_xor([4, 5, 7, 5])).to eq 0
   end
 end
